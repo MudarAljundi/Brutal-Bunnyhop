@@ -27,14 +27,29 @@ public class Health : MonoBehaviour {
 			GameManager.shootableObjects.Add(transform);
 		}
 	}
-	private IEnumerator FlashRed () {
+	IEnumerator FlashRedCoroutine() {
+		if (particleSystemExplosion == "YellowBlood") {
+			GameManager.yellowBloodParticleSystem.transform.position = transform.position + new Vector3(0, 0, 1);
+			GameManager.yellowBloodParticleSystem.GetComponent<ParticleSystem>().Play();
+		}
+		else if (particleSystemExplosion == "Blood") {
+			GameManager.bloodParticleSystem.transform.position = transform.position + new Vector3(0, 0, 1);
+			GameManager.bloodParticleSystem.GetComponent<ParticleSystem>().Play();
+		}
+		else if (particleSystemExplosion == "Debris") {
+			GameManager.debrisParticleSystem.transform.position = transform.position + new Vector3(0, 0, 1);
+			GameManager.debrisParticleSystem.GetComponent<ParticleSystem>().Play();
+		}
 
-		Color defaultColor = GetComponent<SpriteRenderer>().color;
-		GetComponent<SpriteRenderer>().color = Color.red;
-
-		yield return new WaitForSeconds(0.1f);
-
-		GetComponent<SpriteRenderer>().color = defaultColor;
+		if (GetComponent<SpriteRenderer>() != null) {
+			GetComponent<SpriteRenderer>().color = Color.red;
+			yield return new WaitForSeconds(0.1f);
+			GetComponent<SpriteRenderer>().color = Color.white;
+		}
+	}
+	public void GiveHealth(float healAmount) {
+		
+		hp += healAmount;
 	}
 	public void TakeDamage (string faction, float damage) {
 
@@ -53,23 +68,33 @@ public class Health : MonoBehaviour {
 		}
 
 		if (hp < 0) {
-			onKill.Invoke();
 			GameManager.shootableObjects.Remove(transform);
-
-			//if (deadSND != null) {
-			//	GameManager.loudAudioSource.PlayOneShot(deadSND);
-			//}
-
+			
 			if (GetComponent<DestroyObject>()) {
 				GetComponent<DestroyObject>().ExecuteDestruction();
 			}
-			return;
+			onKill.Invoke();
+		} else {
+
+			if (damageSND != null) {
+				GetComponent<AudioSource>().PlayOneShot(damageSND);
+			}
+			StartCoroutine(FlashRedCoroutine());
+			onDamage.Invoke();
 		}
 		
-		if (damageSND != null) {
-			GetComponent<AudioSource>().PlayOneShot(damageSND);
+	}
+	public void TakeDamageWithPropultion(string factionName, float damageAmount, Vector2 propultion) {
+
+		for (int i = 0; i < uneffectedByFactions.Count; i += 1) {
+			if (factionName == uneffectedByFactions[i]) {
+				return;
+			}
 		}
-		StartCoroutine(FlashRed());
-		onDamage.Invoke();
+
+		if (GetComponent<Rigidbody>() == true) {
+			GetComponent<Rigidbody>().AddForce(propultion, ForceMode.Impulse);
+		}
+		TakeDamage(factionName, damageAmount);
 	}
 }

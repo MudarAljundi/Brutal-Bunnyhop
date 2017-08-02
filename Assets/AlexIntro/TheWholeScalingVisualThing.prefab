@@ -54,8 +54,6 @@ GameObject:
   - component: {fileID: 224249177885232842}
   - component: {fileID: 222574822000158352}
   - component: {fileID: 114962627309584974}
-  - component: {fileID: 114669502234889928}
-  - component: {fileID: 114120670988821880}
   m_Layer: 5
   m_Name: BGFadeOut Start
   m_TagString: Untagged
@@ -181,49 +179,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 3
---- !u!114 &114120670988821880
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1480185820695450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9775b8f5604e5bb46aeeead267391e41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loopTimer: 0
-  startCountdownOnAwake: 1
-  countdownTime: 0
-  events:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114669502234889928}
-        m_MethodName: StartFadeOut
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114669502234889928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1480185820695450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c33f70c16c70884eb433962851b9ce0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableAfterFadeOut: 1
-  speedMultiplier: 0.5
 --- !u!114 &114682180627559472
 MonoBehaviour:
   m_ObjectHideFlags: 1

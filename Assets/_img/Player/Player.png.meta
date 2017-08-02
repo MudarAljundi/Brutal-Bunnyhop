@@ -1,15 +1,70 @@
 fileFormatVersion: 2
-guid: 8a208e3f27565e141805f054a94a1f9d
-timeCreated: 1501416415
+guid: 0e0c64f691090a640b04c2f29e09301f
+timeCreated: 1501691689
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player 0
-    21300002: Player 1
-    21300004: Player 2
-    21300006: Player 3
-    21300008: Player 4
-    21300010: Player 5
+    21300000: Player_Idle_R_0
+    21300002: Player_Run_R_0
+    21300004: Player_Run_R_1
+    21300006: Player_Run_R_2
+    21300008: Player_Run_R_3
+    21300010: Player_Fly_0
+    21300012: Player_Fly_1
+    21300014: Player_Fly_2
+    21300016: Player_Fly_3
+    21300018: Player_Fall_0
+    21300020: Player_Fall_1
+    21300022: Player_Dead_0
+    21300024: Player_Dash_R_0
+    21300026: Player_Dash_R_1
+    21300028: Player_DeadFly_0
+    21300030: Player_DeadFly_1
+    21300032: Player_MidAir_0
+    21300034: Player_Idle_R_1
+    21300036: Player_Idle_R_2
+    21300038: Player_Death_0
+    21300040: Player_MidAir_R_0
+    21300042: Player 0
+    21300044: Player 1
+    21300046: Player 2
+    21300048: Player 3
+    21300050: Player 4
+    21300052: Player 5
+    21300054: Player 6
+    21300056: Player 7
+    21300058: Player 8
+    21300060: Player 9
+    21300062: Player 10
+    21300064: Player 11
+    21300066: Player 12
+    21300068: Player 13
+    21300070: Player 14
+    21300072: Player 15
+    21300074: Player 16
+    21300076: Player 17
+    21300078: Player 18
+    21300080: Player_DashAir_0
+    21300082: Player_DashAir_1
+    21300084: Player_0
+    21300086: Player_1
+    21300088: Player_2
+    21300090: Player_3
+    21300092: Player_4
+    21300094: Player_5
+    21300096: Player_6
+    21300098: Player_7
+    21300100: Player_8
+    21300102: Player_9
+    21300104: Player_10
+    21300106: Player_11
+    21300108: Player_12
+    21300110: Player_13
+    21300112: Player_14
+    21300114: Player_15
+    21300116: Player_16
+    21300118: Player_17
+    21300120: Player_18
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -39,9 +94,9 @@ TextureImporter:
     filterMode: 0
     aniso: -1
     mipBias: -1
-    wrapU: -1
-    wrapV: -1
-    wrapW: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -53,7 +108,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -62,7 +117,31 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 256
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 256
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 256
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -73,85 +152,267 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player 0
+      name: Player_Idle_R_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 20
+        y: 208
+        width: 33
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Player 1
+      name: Player_Idle_R_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 84
+        y: 208
+        width: 33
+        height: 31
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Player 2
+      name: Player_Idle_R_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 148
+        y: 208
+        width: 33
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Player 3
+      name: Player_Run_R_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 208
+        y: 209
+        width: 37
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Player 4
+      name: Player_Run_R_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 276
+        y: 208
+        width: 33
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Player 5
+      name: Player_Run_R_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
+        x: 339
+        y: 209
+        width: 34
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Run_R_3
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 208
+        width: 33
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Fly_0
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 208
+        width: 20
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Fly_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 144
+        width: 20
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Fly_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 144
+        width: 20
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Fly_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 144
+        width: 20
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_DeadFly_0
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 144
+        width: 30
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_DeadFly_1
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 144
+        width: 32
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Death_0
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 143
+        width: 37
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Dash_R_0
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 144
+        width: 30
+        height: 19
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_Dash_R_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 144
+        width: 30
+        height: 19
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_DashAir_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 80
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_DashAir_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 80
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Player_MidAir_R_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 80
+        width: 37
+        height: 30
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
